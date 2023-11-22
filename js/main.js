@@ -23,14 +23,32 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    $(".testimonial-container").slick({
-      dots: false,
-      arrows: true,
-      infinite: false,
-      speed: 2000,
-      slidesToScroll: 1,
-      slidesToShow: 1,
-      autoplay: false,
-      pauseOnFocus: false,
-    });
+  $(".testimonial-container").slick({
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 2000,
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    autoplay: false,
+    pauseOnFocus: false,
   });
+});
+
+//   accordion
+
+$(document).ready(function () {
+  var allPanels = $(".accordion > .inner").hide();
+
+  $(".accordion > h2 > a").click(function () {
+    $(this).slideDown(500);
+    $(this).toggleClass("selected");
+
+    $(this)
+      .parent()
+      .next()
+      .slideToggle(function () {});
+
+    return false;
+  });
+});
