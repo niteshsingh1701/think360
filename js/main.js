@@ -11,13 +11,26 @@ $(document).ready(function () {
 // home banner
 $(document).ready(function () {
   $(".hero__slider").slick({
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 1500,
     slidesToShow: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     pauseOnFocus: false,
   });
 });
+
+$(document).ready(function () {
+    $(".testimonial-container").slick({
+      dots: false,
+      arrows: true,
+      infinite: false,
+      speed: 2000,
+      slidesToScroll: 1,
+      slidesToShow: 1,
+      autoplay: false,
+      pauseOnFocus: false,
+    });
+  });
